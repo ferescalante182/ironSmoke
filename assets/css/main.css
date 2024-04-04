@@ -3947,7 +3947,6 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
     margin: 0 0 1.5rem 0;
   }
 }
-
 #main > .posts {
   display: -moz-flex;
   display: -webkit-flex;
@@ -3975,22 +3974,16 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   -webkit-flex-grow: 0;
   -ms-flex-grow: 0;
   flex-grow: 0;
-}
-
-#main > .posts > * {
-  width: 50%;
-}
-
-#main > .posts > * {
-  padding: 4rem;
-  width: 50%;
+  width: 33.33%;
+  padding: 4rem; /* Adjust padding as needed */
+  box-sizing: border-box; /* Include padding in the element's total width */
 }
 
 #main > .posts > article {
   border-color: #eeeeee;
   border-left-width: 2px;
-  border-style: solid;
   border-top-width: 2px;
+  border-style: solid;
   text-align: center;
 }
 
@@ -3998,40 +3991,24 @@ body.is-preload #intro:not(.hidden) + #header + #nav {
   margin-bottom: 0;
 }
 
-#main > .posts > article:nth-child(2n - 1) {
-  border-left-width: 0;
-}
-
-#main > .posts > article:nth-child(-n + 2) {
-  border-top-width: 0;
-}
-
 @media screen and (max-width: 980px) {
   #main > .posts > * {
-    width: 50%;
-  }
-
-  #main > .posts > * {
-    padding: 2.5rem;
-    width: 50%;
+    width: 33.33%;
+    padding: 2.5rem; /* Adjust padding for smaller screens */
   }
 }
 
 @media screen and (max-width: 736px) {
   #main > .posts > * {
     width: 100%;
+    padding: 2rem; /* Adjust padding for smaller screens */
   }
 
-  #main > .posts > * {
-    padding: 2rem;
-    width: 100%;
-  }
-
-  #main > .posts > article:nth-child(2n - 1) {
+  #main > .posts > article:nth-child(3n) {
     border-left-width: 2px;
   }
 
-  #main > .posts > article:nth-child(-n + 2) {
+  #main > .posts > article:nth-child(-n + 3) {
     border-top-width: 2px;
   }
 
